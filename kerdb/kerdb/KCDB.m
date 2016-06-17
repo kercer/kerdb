@@ -644,7 +644,7 @@ KCDBOptions MakeDefaultDBOptions()
             ret = (ret << 8) + (unsigned char)bytes[2];
             ret = (ret << 8) + (unsigned char)bytes[1];
             ret = (ret << 8) + (unsigned char)bytes[0];
-            return ret;
+            return (long)ret;
         }
         else
         {
@@ -825,7 +825,7 @@ KCDBOptions MakeDefaultDBOptions()
     return iter;
 }
 
-- (KCBytes)getPropertyBytes:(KCBytes&)aKey
+- (KCBytes)getPropertyBytes:(KCBytes)aKey
 {
     leveldb::Slice keySlice = SliceFromBytes(aKey);
     std::string value;

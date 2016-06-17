@@ -10,6 +10,7 @@
 
 @protocol KCDBObject <NSObject>
 - (NSData*)toBytes;
+- (id)toObject:(NSData*)aData;
 @end
 
 //@interface KCDBObject : NSObject
