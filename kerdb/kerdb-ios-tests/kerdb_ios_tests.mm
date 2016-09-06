@@ -64,7 +64,7 @@ NSString* getLibraryPath()
 {
     KCDB* db = [[KCDB alloc] initWithPath:[NSString stringWithFormat:@"%@/zihong_db",getLibraryPath()]];
     XCTAssertTrue([db open]);
-    XCTAssertTrue([db isOpen]);
+    XCTAssertTrue([db isOpened]);
     [db close];
     [db destroy];
     

@@ -49,7 +49,7 @@
 {
     @synchronized (self)
     {
-        if (m_snapshot && _db && [_db isOpen])
+        if (m_snapshot && _db && [_db isOpened])
         {
             [_db db]->ReleaseSnapshot(m_snapshot);
             m_snapshot = nil;

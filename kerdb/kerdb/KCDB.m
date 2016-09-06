@@ -191,7 +191,7 @@ KCDBOptions MakeDefaultDBOptions()
     
     return true;
 }
-- (BOOL)isOpen
+- (BOOL)isOpened
 {
     return !(m_db == NULL);
 }
@@ -226,7 +226,7 @@ KCDBOptions MakeDefaultDBOptions()
 }
 
 
-- (KCSnapshot *)createSnapshot
+- (KCSnapshot *)createDBSnapshot
 {
     KCSnapshot* snapshot = [KCSnapshot createSnapshotFromDB:self];
     return snapshot;
@@ -798,7 +798,7 @@ KCDBOptions MakeDefaultDBOptions()
 }
 
 #pragma mark - ITERATORS
-- (KCIterator*)iterator
+- (KCIterator*)iteratorDB
 {
     return [self iteratorWithSnapshot:nil];
 }

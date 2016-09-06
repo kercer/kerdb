@@ -62,7 +62,7 @@ typedef struct
 /**
  Checks if database is open.
  */
-- (BOOL)isOpen;
+- (BOOL)isOpened;
 
 /**
  Closes database.
@@ -81,7 +81,7 @@ typedef struct
  snapshot was taken do not affect the snapshot. Most *read* methods available in the KCDB class are also
  available in the KCSnapshot class.
  */
-- (KCSnapshot*)createSnapshot;
+- (KCSnapshot*)createDBSnapshot;
 
 #pragma mark - CREATE
 
@@ -238,7 +238,7 @@ typedef struct
 - (int)countKeysBetween:(NSString*)aStartPrefix endPrefix:(NSString*)aEndPrefix;
 
 #pragma mark - ITERATORS
-- (KCIterator*)iterator;
+- (KCIterator*)iteratorDB;
 - (KCIterator*)iteratorWithSnapshot:(KCSnapshot*)aSnapshot;
 - (KCIterator*)iteratorWithSnapshot:(KCSnapshot*)aSnapshot fillCache:(BOOL)aFillCache;
 
