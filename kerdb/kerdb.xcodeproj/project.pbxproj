@@ -29,7 +29,6 @@
 		DF4830871CF33321000C3759 /* KCBytes.h in Headers */ = {isa = PBXBuildFile; fileRef = DF4830851CF33321000C3759 /* KCBytes.h */; };
 		DF4830881CF33321000C3759 /* KCBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4830861CF33321000C3759 /* KCBytes.m */; };
 		DFA11A6F1CEEB8A5003794E7 /* kerdb_ios_tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = DFA11A6D1CEEB8A5003794E7 /* kerdb_ios_tests.mm */; };
-		DFA11A771CEEC3AE003794E7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFA11A761CEEC3AE003794E7 /* Info.plist */; };
 		DFA11AAA1CEEC485003794E7 /* builder.cc in Sources */ = {isa = PBXBuildFile; fileRef = DFA11A7C1CEEC485003794E7 /* builder.cc */; };
 		DFA11AAB1CEEC485003794E7 /* builder.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11A7D1CEEC485003794E7 /* builder.h */; };
 		DFA11AAD1CEEC485003794E7 /* c.cc in Sources */ = {isa = PBXBuildFile; fileRef = DFA11A7F1CEEC485003794E7 /* c.cc */; };
@@ -660,7 +659,7 @@
 		9295C98C1B2591EA00C388EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = com.kercer;
 				TargetAttributes = {
 					921682811B25C1A300561211 = {
@@ -709,7 +708,6 @@
 				DF095F6D1D128776002FD240 /* KCWriteBatch.h in Resources */,
 				DF095F6E1D128776002FD240 /* KCIterator.h in Resources */,
 				DF095F6F1D128776002FD240 /* KCBytes.h in Resources */,
-				DFA11A771CEEC3AE003794E7 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,8 +836,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -887,8 +887,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -920,6 +922,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -952,6 +955,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
