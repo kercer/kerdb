@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		921682881B25C1A300561211 /* kerdb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9295C9951B2591EA00C388EB /* kerdb.framework */; };
-		921682911B2668F500561211 /* leveldb.h in Headers */ = {isa = PBXBuildFile; fileRef = 9216828F1B2668F500561211 /* leveldb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		921682911B2668F500561211 /* leveldb.h in Headers */ = {isa = PBXBuildFile; fileRef = 9216828F1B2668F500561211 /* leveldb.h */; };
 		DF073F7E1CF016AF001DFBBA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFA11A761CEEC3AE003794E7 /* Info.plist */; };
 		DF095F691D128776002FD240 /* KerDB.h in Resources */ = {isa = PBXBuildFile; fileRef = DFF4B09B1CF83733008C29D2 /* KerDB.h */; };
 		DF095F6A1D128776002FD240 /* KCDB.h in Resources */ = {isa = PBXBuildFile; fileRef = DFA11B7F1CEEDB2B003794E7 /* KCDB.h */; };
@@ -63,20 +63,20 @@
 		DFA11AD51CEEC485003794E7 /* write_batch.cc in Sources */ = {isa = PBXBuildFile; fileRef = DFA11AA71CEEC485003794E7 /* write_batch.cc */; };
 		DFA11ADA1CEEC4C4003794E7 /* memenv.cc in Sources */ = {isa = PBXBuildFile; fileRef = DFA11AD71CEEC4C4003794E7 /* memenv.cc */; };
 		DFA11ADB1CEEC4C4003794E7 /* memenv.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AD81CEEC4C4003794E7 /* memenv.h */; };
-		DFA11AEB1CEEC505003794E7 /* c.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11ADD1CEEC505003794E7 /* c.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AEC1CEEC505003794E7 /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11ADE1CEEC505003794E7 /* cache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AED1CEEC505003794E7 /* comparator.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11ADF1CEEC505003794E7 /* comparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AEE1CEEC505003794E7 /* db.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE01CEEC505003794E7 /* db.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AEF1CEEC505003794E7 /* dumpfile.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE11CEEC505003794E7 /* dumpfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AF01CEEC505003794E7 /* env.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE21CEEC505003794E7 /* env.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AF11CEEC505003794E7 /* filter_policy.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE31CEEC505003794E7 /* filter_policy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AF21CEEC505003794E7 /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE41CEEC505003794E7 /* iterator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AF31CEEC505003794E7 /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE51CEEC505003794E7 /* options.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AF41CEEC505003794E7 /* slice.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE61CEEC505003794E7 /* slice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AF51CEEC505003794E7 /* status.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE71CEEC505003794E7 /* status.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AF61CEEC505003794E7 /* table.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE81CEEC505003794E7 /* table.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AF71CEEC505003794E7 /* table_builder.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE91CEEC505003794E7 /* table_builder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFA11AF81CEEC505003794E7 /* write_batch.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AEA1CEEC505003794E7 /* write_batch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFA11AEB1CEEC505003794E7 /* c.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11ADD1CEEC505003794E7 /* c.h */; };
+		DFA11AEC1CEEC505003794E7 /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11ADE1CEEC505003794E7 /* cache.h */; };
+		DFA11AED1CEEC505003794E7 /* comparator.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11ADF1CEEC505003794E7 /* comparator.h */; };
+		DFA11AEE1CEEC505003794E7 /* db.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE01CEEC505003794E7 /* db.h */; };
+		DFA11AEF1CEEC505003794E7 /* dumpfile.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE11CEEC505003794E7 /* dumpfile.h */; };
+		DFA11AF01CEEC505003794E7 /* env.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE21CEEC505003794E7 /* env.h */; };
+		DFA11AF11CEEC505003794E7 /* filter_policy.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE31CEEC505003794E7 /* filter_policy.h */; };
+		DFA11AF21CEEC505003794E7 /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE41CEEC505003794E7 /* iterator.h */; };
+		DFA11AF31CEEC505003794E7 /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE51CEEC505003794E7 /* options.h */; };
+		DFA11AF41CEEC505003794E7 /* slice.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE61CEEC505003794E7 /* slice.h */; };
+		DFA11AF51CEEC505003794E7 /* status.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE71CEEC505003794E7 /* status.h */; };
+		DFA11AF61CEEC505003794E7 /* table.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE81CEEC505003794E7 /* table.h */; };
+		DFA11AF71CEEC505003794E7 /* table_builder.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AE91CEEC505003794E7 /* table_builder.h */; };
+		DFA11AF81CEEC505003794E7 /* write_batch.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AEA1CEEC505003794E7 /* write_batch.h */; };
 		DFA11AFA1CEEC520003794E7 /* atomic_pointer.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AF91CEEC520003794E7 /* atomic_pointer.h */; };
 		DFA11AFC1CEEC529003794E7 /* port.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AFB1CEEC529003794E7 /* port.h */; };
 		DFA11AFE1CEEC531003794E7 /* port_example.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA11AFD1CEEC531003794E7 /* port_example.h */; };
@@ -553,22 +553,22 @@
 				DFA11B881CEEE0B9003794E7 /* KCSnapshot.h in Headers */,
 				DFA11B811CEEDB2B003794E7 /* KCDB.h in Headers */,
 				DFA11AF81CEEC505003794E7 /* write_batch.h in Headers */,
+				DFA11AF41CEEC505003794E7 /* slice.h in Headers */,
+				DFA11AF61CEEC505003794E7 /* table.h in Headers */,
+				DFA11AF51CEEC505003794E7 /* status.h in Headers */,
+				DFA11AF71CEEC505003794E7 /* table_builder.h in Headers */,
+				DFA11AF31CEEC505003794E7 /* options.h in Headers */,
+				DFA11B611CEEC59A003794E7 /* hash.h in Headers */,
+				921682911B2668F500561211 /* leveldb.h in Headers */,
+				DFA11AF21CEEC505003794E7 /* iterator.h in Headers */,
 				DFA11AF11CEEC505003794E7 /* filter_policy.h in Headers */,
+				DFA11AF01CEEC505003794E7 /* env.h in Headers */,
+				DFA11AEF1CEEC505003794E7 /* dumpfile.h in Headers */,
+				DFA11AEE1CEEC505003794E7 /* db.h in Headers */,
 				DFA11AED1CEEC505003794E7 /* comparator.h in Headers */,
 				DFA11AEC1CEEC505003794E7 /* cache.h in Headers */,
-				DFA11AF51CEEC505003794E7 /* status.h in Headers */,
-				DFA11AF31CEEC505003794E7 /* options.h in Headers */,
-				DFA11AF61CEEC505003794E7 /* table.h in Headers */,
-				DFA11AF21CEEC505003794E7 /* iterator.h in Headers */,
-				DFA11AEE1CEEC505003794E7 /* db.h in Headers */,
-				DFA11AEF1CEEC505003794E7 /* dumpfile.h in Headers */,
-				DFA11AF41CEEC505003794E7 /* slice.h in Headers */,
-				DFA11AF71CEEC505003794E7 /* table_builder.h in Headers */,
-				DFA11AF01CEEC505003794E7 /* env.h in Headers */,
 				DFA11AEB1CEEC505003794E7 /* c.h in Headers */,
-				DFA11B611CEEC59A003794E7 /* hash.h in Headers */,
 				DFA11AC01CEEC485003794E7 /* log_reader.h in Headers */,
-				921682911B2668F500561211 /* leveldb.h in Headers */,
 				DF2C38661CE9B329007A8CC4 /* snappy-stubs-public.h in Headers */,
 				DFA11B631CEEC59A003794E7 /* histogram.h in Headers */,
 				DFA11AD21CEEC485003794E7 /* version_set.h in Headers */,
