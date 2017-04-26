@@ -85,7 +85,7 @@ void BlockBuilder::Add(const Slice& key, const Slice& value) {
     }
   } else {
     // Restart compression
-    restarts_.push_back(buffer_.size());
+    restarts_.push_back((unsigned int)buffer_.size());
     counter_ = 0;
   }
   const size_t non_shared = key.size() - shared;
