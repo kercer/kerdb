@@ -93,7 +93,7 @@ class Block::Iter : public Iterator {
 
   // Return the offset in data_ just past the end of the current entry.
   inline uint32_t NextEntryOffset() const {
-    return (value_.data() + value_.size()) - data_;
+    return (uint32_t)((value_.data() + value_.size()) - data_);
   }
 
   uint32_t GetRestartPoint(uint32_t index) {
