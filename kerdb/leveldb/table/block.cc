@@ -32,7 +32,7 @@ Block::Block(const BlockContents& contents)
       // The size is too small for NumRestarts()
       size_ = 0;
     } else {
-      restart_offset_ = size_ - (1 + NumRestarts()) * sizeof(uint32_t);
+      restart_offset_ = (uint32_t)(size_ - (1 + NumRestarts()) * sizeof(uint32_t));
     }
   }
 }

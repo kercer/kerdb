@@ -265,7 +265,7 @@ uint16* WorkingMemory::GetHashTable(size_t input_size, int* table_size) {
     table = large_table_;
   }
 
-  *table_size = htsize;
+  *table_size = (int)htsize;
   memset(table, 0, htsize * sizeof(*table));
   return table;
 }

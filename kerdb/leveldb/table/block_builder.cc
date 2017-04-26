@@ -65,7 +65,7 @@ Slice BlockBuilder::Finish() {
   for (size_t i = 0; i < restarts_.size(); i++) {
     PutFixed32(&buffer_, restarts_[i]);
   }
-  PutFixed32(&buffer_, restarts_.size());
+  PutFixed32(&buffer_, (uint32_t)restarts_.size());
   finished_ = true;
   return Slice(buffer_);
 }
