@@ -564,7 +564,7 @@ static uint16 MakeEntry(unsigned int extra,
   return len | (copy_offset << 8) | (extra << 11);
 }
 
-static void ComputeTable() {
+__unused static void ComputeTable() {
   uint16 dst[256];
 
   // Place invalid entries in all places to detect missing initialization
