@@ -265,7 +265,7 @@ uint16* WorkingMemory::GetHashTable(size_t input_size, int* table_size) {
     table = large_table_;
   }
 
-  *table_size = htsize;
+  *table_size = (int)htsize;
   memset(table, 0, htsize * sizeof(*table));
   return table;
 }
@@ -295,7 +295,7 @@ static inline EightBytesReference GetEightBytesAt(const char* ptr) {
 static inline uint32 GetUint32AtOffset(uint64 v, int offset) {
   assert(offset >= 0);
   assert(offset <= 4);
-  return v >> (LittleEndian::IsLittleEndian() ? 8 * offset : 32 - 8 * offset);
+  return (uint32)(v >> (LittleEndian::IsLittleEndian() ? 8 * offset : 32 - 8 * offset));
 }
 
 #else
@@ -400,7 +400,7 @@ char* CompressFragment(const char* input,
       // than 4 bytes match.  But, prior to the match, input
       // bytes [next_emit, ip) are unmatched.  Emit them as "literal bytes."
       assert(next_emit + 16 <= ip_end);
-      op = EmitLiteral(op, next_emit, ip - next_emit, true);
+      op = EmitLiteral(op, next_emit, (int)(ip - next_emit), true);
 
       // Step 3: Call EmitCopy, and then see if another EmitCopy could
       // be our next move.  Repeat until we find no match for the
@@ -446,7 +446,7 @@ char* CompressFragment(const char* input,
  emit_remainder:
   // Emit the remaining bytes as a literal
   if (next_emit < ip_end) {
-    op = EmitLiteral(op, next_emit, ip_end - next_emit, false);
+    op = EmitLiteral(op, next_emit, (int)(ip_end - next_emit), false);
   }
 
   return op;
@@ -564,7 +564,7 @@ static uint16 MakeEntry(unsigned int extra,
   return len | (copy_offset << 8) | (extra << 11);
 }
 
-static void ComputeTable() {
+__unused static void ComputeTable() {
   uint16 dst[256];
 
   // Place invalid entries in all places to detect missing initialization
@@ -757,7 +757,7 @@ class SnappyDecompressor {
           size_t n;
           ip = reader_->Peek(&n);
           avail = n;
-          peeked_ = avail;
+          peeked_ = (uint32)avail;
           if (avail == 0) return;  // Premature end of input
           ip_limit_ = ip + avail;
         }
@@ -794,7 +794,7 @@ bool SnappyDecompressor::RefillTag() {
     reader_->Skip(peeked_);   // All peeked bytes are used up
     size_t n;
     ip = reader_->Peek(&n);
-    peeked_ = n;
+    peeked_ = (uint32)n;
     if (n == 0) {
       eof_ = true;
       return false;
@@ -810,7 +810,7 @@ bool SnappyDecompressor::RefillTag() {
   assert(needed <= sizeof(scratch_));
 
   // Read more bytes from reader if needed
-  uint32 nbuf = ip_limit_ - ip;
+  uint32 nbuf = (uint32)(ip_limit_ - ip);
   if (nbuf < needed) {
     // Stitch together bytes from ip and reader to form the word
     // contents.  We store the needed bytes in "scratch_".  They
@@ -823,7 +823,7 @@ bool SnappyDecompressor::RefillTag() {
       size_t length;
       const char* src = reader_->Peek(&length);
       if (length == 0) return false;
-      uint32 to_add = min<uint32>(needed - nbuf, length);
+      uint32 to_add = min<uint32>(needed - nbuf, (uint32)length);
       memcpy(scratch_ + nbuf, src, to_add);
       nbuf += to_add;
       reader_->Skip(to_add);
@@ -875,7 +875,7 @@ size_t Compress(Source* reader, Sink* writer) {
   size_t written = 0;
   size_t N = reader->Available();
   char ulength[Varint::kMax32];
-  char* p = Varint::Encode32(ulength, N);
+  char* p = Varint::Encode32(ulength, (uint32)N);
   writer->Append(ulength, p-ulength);
   written += (p - ulength);
 
@@ -925,7 +925,7 @@ size_t Compress(Source* reader, Sink* writer) {
     uint16* table = wmem.GetHashTable(num_to_read, &table_size);
 
     // Compress input_fragment and append to dest
-    const int max_output = MaxCompressedLength(num_to_read);
+    const int max_output = (int)MaxCompressedLength(num_to_read);
 
     // Need a scratch buffer for the output, in case the byte sink doesn't
     // have room for us directly.
